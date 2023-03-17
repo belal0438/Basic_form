@@ -1,0 +1,28 @@
+
+
+
+
+
+var form = document.getElementById("my-form");
+var NameInput = document.getElementById("name");
+var EmailInput = document.getElementById("email");
+var submitbtn = document.querySelector(".btn");
+
+
+form.addEventListener("submit",onsubmit);
+
+function onsubmit(e){
+    e.preventDefault();
+     let DataObj = {
+        Name:NameInput.value,
+        Email:EmailInput.value
+     }
+  converIntostr = JSON.stringify(DataObj);
+  localStorage.setItem("Data",converIntostr);
+
+
+//   forobj=localStorage.setItem("Data",converIntostr);
+//   //convert into obj format;
+//  console.log(localStorage.getItem(JSON.parse("forobj")));
+
+}
